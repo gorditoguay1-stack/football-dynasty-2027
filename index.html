@@ -1,29 +1,109 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#08131d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Dynasty 2027"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><title>Football Dynasty 2027 — Manager Edition</title><style>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#08131d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Dynasty 2027"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><title>Football Dynasty 2027 — Manager Ultra</title><style>
 :root{font-family:Inter,system-ui,Arial,sans-serif;color:#e8f1f8;background:#08131d}*{box-sizing:border-box}body{margin:0}button,select,input{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:10px 13px;background:#1b3547;color:#e8f1f8}button:hover{filter:brightness(1.2)}button.primary{background:#2fd7a1;color:#08201a;font-weight:800}button:disabled{opacity:.4;cursor:not-allowed}header{padding:18px 4%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#102333;border-bottom:1px solid #284254}h1{margin:0;font-size:22px}h1 span{color:#36e0a8}.muted{color:#9db3c2;font-size:13px}.layout{display:grid;grid-template-columns:205px 1fr;min-height:calc(100vh - 80px)}aside{padding:16px 12px;background:#0d1d2a;border-right:1px solid #254052;display:flex;flex-direction:column;gap:7px}aside button{text-align:left;background:transparent}aside button.active{background:#205045;color:#aaffdc}main{padding:22px;max-width:1450px;width:100%;margin:auto}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.card,.panel{background:#122838;border:1px solid #294456;border-radius:14px;padding:17px}.card strong{font-size:24px;display:block;color:#65e4b7}.panel{margin-bottom:15px}h2{margin:0 0 16px;font-size:23px}h3{margin:0 0 12px;font-size:16px}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:10px 8px;border-bottom:1px solid #2b4556;text-align:left}th{color:#a7bfcb;font-size:12px}tr.mine{background:#1c4b45}td button{padding:6px 9px}.cols{display:grid;grid-template-columns:1fr 1fr;gap:15px}.actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center}select,input{background:#0b1e2c;border:1px solid #38566a;color:white;padding:10px;border-radius:8px;max-width:100%}.pill{padding:4px 8px;background:#264a57;border-radius:50px;font-size:12px}.notice{background:#1b4b41;padding:12px;border-radius:10px;margin-bottom:15px}.danger{color:#ff9c9c}.scroll{overflow-x:auto}#pitch{width:100%;aspect-ratio:16/9;background:#092d25;border-radius:10px;display:block}.score{text-align:center;font-size:27px;font-weight:900;padding:12px}.tiny{font-size:12px}.bar{height:9px;border-radius:20px;background:#284352;overflow:hidden}.bar i{display:block;height:100%;background:#40d7a0}.setup{max-width:750px;margin:50px auto;padding:30px}.setup select{width:100%;margin:12px 0}.event{padding:8px;border-bottom:1px solid #294657}.footer{padding:12px;text-align:center;color:#7895a5;font-size:12px}@media(max-width:800px){.layout{display:block}aside{position:sticky;top:0;z-index:3;flex-direction:row;overflow-x:auto;padding:8px}aside button{white-space:nowrap;font-size:12px}.cards{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}main{padding:12px}header{padding:12px}h1{font-size:17px}td,th{padding:8px 5px;font-size:11px}.setup{margin:15px;padding:20px}}@media(max-width:400px){.cards{grid-template-columns:1fr 1fr}.card{padding:11px}.card strong{font-size:19px}}
 body{padding-bottom:env(safe-area-inset-bottom)}button,select{min-height:44px}header{padding-top:max(12px,env(safe-area-inset-top))} @media(max-width:600px){button{touch-action:manipulation}input,select{font-size:16px}} 
-/* Dynasty Manager UI 2027 — interfaz original inspirada en managers modernos */
-:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f2efff;background:#090b18;color-scheme:dark}
-body{background:radial-gradient(ellipse at 90% 0%,#22183c 0,transparent 40%),#090b18}
-header{background:linear-gradient(110deg,#19132e,#111526 65%,#171b2f);border-bottom:1px solid #47346a;box-shadow:0 8px 30px #0004;min-height:78px}
-header h1{font-size:21px;letter-spacing:.4px;font-weight:900;text-transform:uppercase}
-header h1 span{color:#b59bff}header .pill{background:#302547;color:#eee5ff;border:1px solid #594679}
-.layout{grid-template-columns:238px minmax(0,1fr)}aside{background:linear-gradient(180deg,#151329,#101323);border-right:1px solid #38304d;padding:18px 12px;gap:5px}
-aside:before{content:'CENTRO DE MANDO';display:block;color:#9a8bb9;font-size:10px;font-weight:900;letter-spacing:2px;padding:12px 14px}
-aside button{border-radius:7px;border-left:3px solid transparent;font-size:13px;font-weight:700;color:#c7bfd9;padding:12px 14px}
-aside button:hover{background:#29213d}aside button.active{background:linear-gradient(90deg,#52358d,#2c2544);border-left-color:#d5c4ff;color:white}
-main{padding:26px 30px;max-width:1500px}h2{font-size:24px;letter-spacing:-.5px;border-bottom:1px solid #3b3352;padding-bottom:13px}h3{font-size:15px;color:#f2eaff}.muted{color:#aaa4be}
-.card,.panel{background:linear-gradient(145deg,#1b1b31,#14182a);border:1px solid #38324e;border-radius:10px;box-shadow:0 8px 22px #0002}
-.card{position:relative;overflow:hidden;border-top:3px solid #805bd6}.card strong{color:#e3d7ff;font-size:26px;letter-spacing:-.7px}.card .muted{text-transform:uppercase;letter-spacing:1px;font-size:10px;font-weight:800}
-button{background:#322b4b;color:#f7f1ff;border:1px solid #4b3b69;border-radius:7px;font-weight:650;transition:background .15s}
-button.primary{background:linear-gradient(120deg,#a27af4,#7950d2);color:white;border:1px solid #b496ff;box-shadow:0 3px 12px #8055df33}
-select,input{background:#121327;border:1px solid #594872;color:#f6efff;border-radius:7px}
-table{font-size:13px}th{background:#29213c;color:#d5c4f8;text-transform:uppercase;letter-spacing:.6px;font-size:10px}td,th{border-bottom:1px solid #353047;padding:11px 10px}tr:nth-child(even){background:#ffffff05}tr.mine{background:#392753}
-.pill{background:#33294b;color:#e6d6ff}.notice{background:#30224b;border-left:3px solid #a581f7}.event{border-bottom:1px solid #3a304e}
-.bar{background:#373048}.bar i{background:linear-gradient(90deg,#7c53df,#bd9cff)}.score{background:#251d3c;color:#f7f0ff;border-radius:8px;margin-bottom:12px}
-#pitch{border:2px solid #5a4979;box-shadow:0 10px 25px #0005}.footer{color:#9d90b3}.setup{border-top:4px solid #9e7af1}
-@media(max-width:800px){header{min-height:74px;padding:12px 14px}header h1{font-size:17px}header .pill{font-size:10px}.layout{display:block}aside{position:sticky;top:0;z-index:5;display:flex;flex-direction:row;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;padding:9px 8px;background:#151328;gap:7px;box-shadow:0 6px 15px #0005}aside:before{display:none}aside button{white-space:nowrap;flex-shrink:0;border:1px solid #403653;border-radius:20px;font-size:12px;padding:10px 13px;min-height:42px}aside button.active{border:1px solid #ae8cf3;background:#49316e}main{padding:15px 12px}h2{font-size:21px}.card,.panel{padding:14px}.cards{gap:9px}.card strong{font-size:21px}table{min-width:460px} .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.cols{grid-template-columns:1fr}.setup{margin:14px auto;padding:18px}button{min-height:44px}}
-@media(max-width:390px){header h1{font-size:15px}.card strong{font-size:18px}}
-</style></head><body><header><div><h1>⚽ <span>FOOTBALL DYNASTY</span> 2027</h1><div class="muted">EDICIÓN MANAGER 3D · PC + MÓVIL</div></div><div id="headerRight"></div></header><div id="app"></div><div class="footer">Proyecto independiente. Nombres de clubes utilizados como referencia; sin afiliación ni licencias oficiales. Plantillas y escudos ficticios.</div><script>
+/* Football Dynasty 2027 — interfaz original de manager profesional */
+:root{--bg:#0a101c;--surface:#111b2d;--surface2:#17243a;--border:#2b3950;--bright:#f5f7ff;--muted:#9dacbf;--accent:#b5f546;--violet:#7655d9;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--bright);background:var(--bg)}
+html{min-height:100%;background:var(--bg)}body{background:radial-gradient(ellipse at 75% 0%,#1a1741 0%,#0a101c 48%);color:var(--bright)}
+header{position:sticky;top:0;z-index:10;min-height:77px;padding:14px 20px;background:#0e1424ee;backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+header h1{font-size:17px;font-weight:900;letter-spacing:.015em}header h1 span{color:var(--accent)}header .muted{font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+#headerRight{display:flex;align-items:center;justify-content:flex-end;gap:8px;min-width:0}#headerRight .pill{font-size:11px;display:block;max-width:36vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#222b47}
+.layout{display:grid;grid-template-columns:236px minmax(0,1fr);min-height:calc(100dvh - 80px);align-items:stretch}
+aside{background:#0d1424;border-right:1px solid var(--border);padding:20px 12px;gap:5px;position:sticky;top:77px;height:calc(100dvh - 77px);overflow-y:auto;align-self:start}
+aside button{display:flex;align-items:center;gap:11px;text-align:left;border-radius:9px;padding:11px 14px;color:#aebbd0;flex-shrink:0;font-weight:620;background:transparent;font-size:13px}
+aside button.active{background:linear-gradient(90deg,#36315e,#292344);box-shadow:inset 3px 0 var(--accent);color:#fff}aside button:hover{background:#26344b}
+aside .nav-label{margin:18px 10px 9px;color:#71819a;font-size:10px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
+aside .club-block{padding:13px;margin:0 0 10px;border-radius:12px;background:linear-gradient(145deg,#222a48,#161f36);border:1px solid #353d62}
+aside .club-block strong{display:block;font-size:13px;margin:5px 0}aside .club-block small{color:#b4bdd4;font-size:11px}
+main{max-width:1520px;padding:28px 30px 42px;margin:0 auto}.muted{color:var(--muted)}
+h2{font-size:23px;font-weight:850;letter-spacing:-.03em}h3{color:#f2f6fc;font-size:14px;font-weight:800}
+.card,.panel{background:linear-gradient(145deg,rgba(25,35,55,.97),rgba(17,27,44,.97));border:1px solid var(--border);border-radius:12px;box-shadow:0 8px 24px #00000012}
+.card{padding:16px}.card strong{color:var(--accent);font-size:26px;letter-spacing:-.03em}.cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.panel{padding:19px}button{background:#253650;border:1px solid #35465e;border-radius:9px;color:#f3f7ff}button:hover{filter:brightness(1.13)}button.primary{background:var(--accent);border-color:var(--accent);color:#17210d;font-weight:850}
+select,input{background:#0c172a;border:1px solid #40516c}.pill{background:#2a3650;color:#e3eafd;border-radius:7px}
+table{font-size:12px}td,th{border-color:#2a3950;padding:12px 8px}th{color:#94a4bb;font-size:11px;text-transform:uppercase;letter-spacing:.04em}tr.mine{background:#253554}
+.event{border-color:#283951;line-height:1.4}.notice{background:#294230}.bar{background:#293752}.bar i{background:var(--accent)}
+.setup{margin:38px auto;max-width:650px;border-top:4px solid var(--accent)}.footer{background:#0a101c;border-top:1px solid #243047}
+.mobile-bar,.mobile-menu-btn,.scrim{display:none}
+.manager-hero{background:linear-gradient(112deg,#262148,#192443 64%,#193e45);border:1px solid #464070;border-radius:15px;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px;position:relative;overflow:hidden}
+.manager-hero:after{content:'⚽';position:absolute;right:110px;top:-42px;font-size:135px;opacity:.09;pointer-events:none}
+.eyebrow{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.15em;color:var(--accent)}.manager-hero h2{font-size:28px;margin:7px 0}.manager-hero p{margin:0;color:#c3cde0;font-size:12px}
+.manager-hero button{flex-shrink:0;position:relative;z-index:1}
+.fm-board{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;margin-top:16px}.fm-board .panel{margin:0}
+.fixture-card{background:linear-gradient(125deg,#1f2849,#141e32);border:1px solid #394361;border-radius:12px;padding:18px;margin:13px 0}
+.fixture-vs{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:13px;text-align:center}.fixture-vs strong{font-size:17px;line-height:1.2}.fixture-vs em{font-size:22px;color:var(--accent);font-weight:900;font-style:normal}.fixture-badge{display:grid;place-items:center;margin:0 auto 9px;height:46px;width:46px;border-radius:13px;background:linear-gradient(140deg,#414277,#252b4c);font-size:24px}
+.news-item{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid #283951}.news-item:last-child{border:0}.news-dot{width:8px;height:8px;flex:0 0 8px;margin-top:6px;border-radius:50%;background:var(--accent)}.news-item p{margin:0;font-size:12px;line-height:1.5}
+.quick-links{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.quick-links button{display:flex;justify-content:center;flex-direction:column;align-items:center;gap:7px;font-size:12px;background:#192741;border-color:#334461;padding:13px 6px}
+.rank-row{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid #283951;font-size:12px}.rank-row:last-child{border:0}.rank-row.me{color:var(--accent);font-weight:800}
+.manager-section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.manager-section-head h3{margin:0}.tiny-tag{font-size:11px;color:#b9cae0;background:#283750;padding:5px 8px;border-radius:6px}
+@media(max-width:900px){.layout{grid-template-columns:192px minmax(0,1fr)}aside{padding:14px 7px}main{padding:16px}.fm-board{grid-template-columns:1fr}}
+@media(max-width:700px){header{min-height:70px;padding:10px 13px;padding-top:max(10px,env(safe-area-inset-top))}header h1{font-size:15px}header .muted{font-size:9px}#headerRight .pill{max-width:31vw;font-size:10px}
+.mobile-menu-btn{display:inline-flex;align-items:center;justify-content:center;min-width:43px;height:43px;font-size:22px;background:#202a45;padding:0;flex-shrink:0}
+.layout{display:block;min-height:calc(100dvh - 70px)}aside{position:fixed;z-index:25;top:0;left:0;bottom:0;width:min(84vw,315px);height:100dvh;padding:22px 14px 110px;padding-top:max(22px,env(safe-area-inset-top));transform:translateX(-110%);transition:transform .2s ease;box-shadow:20px 0 50px #0008;overflow:auto}body.drawer-open aside{transform:translateX(0)}body.drawer-open .scrim{display:block;position:fixed;inset:0;background:#0009;z-index:20}
+aside button{font-size:14px;min-height:43px}main{padding:15px 12px 100px}.mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:15;background:#101a2dfa;border-top:1px solid #31405a;padding:7px 5px max(8px,env(safe-area-inset-bottom));justify-content:space-around;gap:2px;backdrop-filter:blur(18px)}.mobile-bar button{display:flex;flex:1;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:49px;padding:4px;border:0;background:transparent;color:#aebbd1;font-size:10px}.mobile-bar button strong{font-size:20px}.mobile-bar button.active{color:var(--accent)}
+.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.card{padding:13px}.card strong{font-size:22px}.cols{grid-template-columns:1fr}.panel{padding:14px}.manager-hero{padding:17px;align-items:flex-start;flex-direction:column}.manager-hero h2{font-size:23px}.manager-hero button{width:100%}.fm-board{grid-template-columns:1fr}.fixture-vs strong{font-size:14px}.fixture-badge{height:38px;width:38px;font-size:20px}.quick-links button{font-size:11px}.footer{padding-bottom:90px}.score{font-size:20px}#pitch{aspect-ratio:16/10} .setup{margin:20px 10px;padding:17px}
+}
+
+/* MANAGER ULTRA — diseño original para iPhone y PC */
+:root{--bg:#080b17;--surface:#14192b;--surface2:#1c2238;--border:#343956;--accent:#d7fb53;--violet:#8665f4;--muted:#aeb6cd}
+body{background:#080b17!important;color:#f4f5fc}
+header{background:#111327!important;border-bottom:1px solid #373250!important}
+header h1{font-size:16px!important;letter-spacing:.03em}
+header h1 span{color:#d7fb53!important}
+.layout aside{background:#101225!important}
+aside button.active{background:#312953!important;box-shadow:inset 3px 0 #d7fb53!important}
+.panel,.card{background:#171b30!important;border:1px solid #343956!important;border-radius:14px!important}
+button.primary{background:#d7fb53!important;color:#141c0a!important;border-color:#d7fb53!important}
+.manager-hero{background:linear-gradient(110deg,#3b2369,#232449 60%,#162c3b)!important}
+.manager-hero:after{content:'⚽';opacity:.1}
+.fm-setup{max-width:1220px;margin:0 auto;padding:18px 14px 80px}
+.fm-setup .eyeline{display:flex;align-items:center;gap:8px;color:#b8b4da;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin:12px 0}
+.fm-setup .welcome{border:1px solid #524379;border-radius:18px;padding:24px;background:radial-gradient(circle at 90% 12%,#6042a06b,transparent 45%),linear-gradient(125deg,#242143,#151b30)}
+.fm-setup .welcome h2{font-size:clamp(28px,5vw,43px);line-height:1.04;letter-spacing:-.045em;margin:12px 0}
+.fm-setup .welcome h2 em{font-style:normal;color:#d7fb53}
+.fm-setup .welcome p{max-width:540px;color:#bec7dd;font-size:14px;line-height:1.6}
+.fm-setup .tag{display:inline-flex;align-items:center;background:#333057;border:1px solid #60528a;color:#e9e5ff;padding:6px 10px;border-radius:8px;font-size:10px;font-weight:800;letter-spacing:.08em}
+.fm-setup .setup-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:14px;margin-top:14px}
+.fm-setup .setup-card{border:1px solid #343956;border-radius:14px;background:#171b30;padding:20px;min-width:0}
+.fm-setup .setup-card h3{font-size:17px;margin:0 0 6px}
+.fm-setup .setup-card p{font-size:12px;color:#aeb6cd;line-height:1.5}
+.fm-setup .field{display:block;margin:20px 0 7px;font-size:11px;font-weight:800;letter-spacing:.1em;color:#bfc6dc;text-transform:uppercase}
+.fm-setup select{width:100%;max-width:none;background:#0d1224;border:1px solid #4b5172;border-radius:9px;padding:14px;color:white}
+.fm-setup .actions{margin-top:20px;display:flex;gap:10px}
+.fm-setup .actions button{flex:1;padding:13px 8px;font-size:13px}
+.fm-setup .mini-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.fm-setup .mini-kpis div{background:#222740;border:1px solid #393f5e;border-radius:10px;padding:13px 8px;text-align:center}
+.fm-setup .mini-kpis b{display:block;font-size:21px;color:#d7fb53}
+.fm-setup .mini-kpis span{font-size:10px;color:#abb5ce}
+.fm-setup .feature-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #30364f;font-size:12px}
+.fm-setup .feature-row i{font-style:normal;background:#302a53;border-radius:9px;padding:10px;font-size:18px}
+.fm-setup .feature-row strong{display:block;font-size:13px;margin-bottom:3px}
+.fm-setup .feature-row small{color:#aab3cc}
+.fm-setup .pitch-preview{height:120px;border:2px solid #b7d8b74a;border-radius:10px;background:repeating-linear-gradient(90deg,#214b40,#214b40 30px,#245448 30px,#245448 60px);position:relative;overflow:hidden;margin-top:14px}
+.fm-setup .pitch-preview:before{content:'';position:absolute;inset:10px;border:1px solid #d7f5d68c;border-radius:2px}
+.fm-setup .pitch-preview:after{content:'';position:absolute;left:50%;top:10px;bottom:10px;border-left:1px solid #d7f5d68c}
+.fm-setup .dots{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:space-around;font-size:15px;text-shadow:0 1px 4px #000}
+.fm-setup .disclaimer{color:#909bb6;font-size:11px;margin-top:14px;line-height:1.5}
+.ultra-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}
+.ultra-top .eyeline{color:#a9a0df;font-size:10px;font-weight:900;letter-spacing:.15em}
+.ultra-top h2{margin:5px 0 0;font-size:25px}
+.ultra-top button{background:#d7fb53;color:#18210c;font-weight:900}
+.ultra-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 14px}
+.ultra-strip>div{background:#171b30;border:1px solid #353957;border-radius:11px;padding:13px}
+.ultra-strip small{display:block;color:#9ca9c6;font-size:10px;letter-spacing:.08em}
+.ultra-strip strong{display:block;font-size:21px;color:#e7edff;margin-top:5px}
+.ultra-columns{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}
+.ultra-fixture{background:linear-gradient(120deg,#332650,#1c2341);border:1px solid #514775;border-radius:14px;padding:18px;margin-bottom:12px}
+.ultra-fixture .clubs{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:16px;font-weight:850;text-align:center;margin:19px 0}
+.ultra-fixture .clubs span{flex:1;min-width:0}
+.ultra-fixture .clubs b{font-size:12px;color:#aeb7d3}
+.ultra-fixture .clubs i{display:block;font-style:normal;font-size:25px;margin-bottom:5px}
+.ultra-fixture button{width:100%}
+.ultra-news{padding:13px 0;border-bottom:1px solid #32374e;font-size:12px;line-height:1.45}
+.ultra-news:before{content:'●';color:#d7fb53;margin-right:9px}
+.ultra-links{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:12px}
+.ultra-links button{text-align:left;background:#242942;border:1px solid #393f5e;padding:13px;font-size:12px}
+@media(max-width:720px){.fm-setup .setup-grid,.ultra-columns{grid-template-columns:1fr}.fm-setup .welcome{padding:22px 17px}.fm-setup .setup-card{padding:17px}.fm-setup .actions{flex-direction:column}.ultra-top{align-items:flex-start}.ultra-top h2{font-size:21px}.ultra-strip{gap:6px}.ultra-strip>div{padding:10px 8px}.ultra-strip strong{font-size:16px}.ultra-fixture .clubs{font-size:13px}.fm-setup{padding:12px 10px 90px}}
+</style></head><body><header><div><h1>⚽ <span>FOOTBALL DYNASTY</span> 2027</h1><div class="muted">MANAGER 2027 · EDICIÓN PRO · IPHONE + PC</div></div><div id="headerRight"></div></header><div id="app"></div><div class="footer">Proyecto independiente. Nombres de clubes utilizados como referencia; sin afiliación ni licencias oficiales. Plantillas y escudos ficticios.</div><script>
 'use strict';
 const LEAGUES={"España · Primera División": ["Real Madrid", "FC Barcelona", "Atlético de Madrid", "Athletic Club", "Real Sociedad", "Villarreal CF", "Real Betis", "Sevilla FC", "Valencia CF", "RC Celta"], "España · Segunda División": ["Real Valladolid", "Real Zaragoza", "Sporting Gijón", "Racing Santander", "Deportivo La Coruña", "CD Leganés", "SD Huesca", "Cádiz CF", "Granada CF", "UD Almería"], "Inglaterra · Premier League": ["Arsenal", "Manchester City", "Liverpool", "Chelsea", "Manchester United", "Tottenham", "Newcastle United", "Aston Villa", "Brighton", "Everton"], "Inglaterra · Championship": ["Leicester City", "Southampton", "Norwich City", "Watford", "West Bromwich Albion", "Middlesbrough", "Coventry City", "Sunderland", "Sheffield United", "Blackburn Rovers"], "Italia · Serie A": ["Inter", "AC Milan", "Juventus", "Napoli", "Roma", "Lazio", "Atalanta", "Fiorentina", "Bologna", "Torino"], "Italia · Serie B": ["Palermo", "Sampdoria", "Bari", "Spezia", "Pisa", "Cesena", "Modena", "Reggiana", "Catanzaro", "Frosinone"], "Alemania · Bundesliga": ["Bayern Múnich", "Borussia Dortmund", "Bayer Leverkusen", "RB Leipzig", "Eintracht Frankfurt", "Stuttgart", "Wolfsburgo", "Werder Bremen", "Friburgo", "Borussia Mönchengladbach"], "Alemania · 2. Bundesliga": ["Hamburgo", "Schalke 04", "Hertha Berlín", "Hannover 96", "Fortuna Düsseldorf", "Núremberg", "Kaiserslautern", "Karlsruher SC", "Magdeburgo", "Paderborn"], "Francia · Ligue 1": ["Paris Saint-Germain", "Marsella", "Mónaco", "Lyon", "Lille", "Niza", "Lens", "Rennes", "Estrasburgo", "Nantes"], "Francia · Ligue 2": ["Saint-Étienne", "Montpellier", "Troyes", "Guingamp", "Bastia", "Amiens", "Rodez", "Grenoble", "Annecy", "Laval"], "Portugal · Primeira Liga": ["Benfica", "FC Porto", "Sporting CP", "Braga", "Vitória Guimarães", "Boavista", "Famalicão", "Gil Vicente", "Rio Ave", "Estoril"], "Países Bajos · Eredivisie": ["Ajax", "PSV", "Feyenoord", "AZ Alkmaar", "Twente", "Utrecht", "Heerenveen", "NEC Nijmegen", "Sparta Rotterdam", "Groningen"], "Bélgica · Pro League": ["Club Brujas", "Anderlecht", "Union Saint-Gilloise", "Genk", "Gent", "Antwerp", "Standard Lieja", "Charleroi", "Mechelen", "Cercle Brujas"], "Escocia · Premiership": ["Celtic", "Rangers", "Aberdeen", "Hearts", "Hibernian", "Dundee United", "Motherwell", "Kilmarnock", "St Mirren", "Dundee FC"], "Turquía · Süper Lig": ["Galatasaray", "Fenerbahçe", "Beşiktaş", "Trabzonspor", "Başakşehir", "Samsunspor", "Kasımpaşa", "Antalyaspor", "Alanyaspor", "Konyaspor"], "Grecia · Super League": ["Olympiacos", "Panathinaikos", "AEK Atenas", "PAOK", "Aris", "OFI Creta", "Atromitos", "Asteras Tripolis", "Volos", "Panetolikos"], "Austria · Bundesliga": ["Salzburgo", "Sturm Graz", "Rapid Viena", "Austria Viena", "LASK", "Wolfsberger AC", "Hartberg", "Altach", "WSG Tirol", "Blau-Weiß Linz"], "Suiza · Super League": ["Young Boys", "Basilea", "Zúrich", "Servette", "Lugano", "Lucerna", "Lausana", "St. Gallen", "Grasshoppers", "Sion"], "Dinamarca · Superliga": ["Copenhague", "Midtjylland", "Brøndby", "Nordsjælland", "Aarhus", "Randers", "Silkeborg", "Viborg", "Odense", "Sønderjyske"], "Suecia · Allsvenskan": ["Malmö FF", "AIK", "Djurgården", "Hammarby", "Elfsborg", "Häcken", "IFK Göteborg", "Norrköping", "Sirius", "Kalmar"], "Noruega · Eliteserien": ["Bodø/Glimt", "Molde", "Rosenborg", "Brann", "Viking", "Tromsø", "Lillestrøm", "Sarpsborg 08", "Strømsgodset", "Odd"], "Polonia · Ekstraklasa": ["Legia Varsovia", "Lech Poznań", "Raków", "Jagiellonia", "Pogoń Szczecin", "Wisła Cracovia", "Cracovia", "Górnik Zabrze", "Śląsk Wrocław", "Widzew Łódź"], "Chequia · Primera Liga": ["Sparta Praga", "Slavia Praga", "Viktoria Plzeň", "Baník Ostrava", "Sigma Olomouc", "Slovan Liberec", "Mladá Boleslav", "Bohemians 1905", "Jablonec", "Teplice"], "Croacia · HNL": ["Dinamo Zagreb", "Hajduk Split", "Rijeka", "Osijek", "Lokomotiva Zagreb", "Varaždin", "Istra 1961", "Slaven Belupo", "Gorica", "Šibenik"], "Brasil · Série A": ["Flamengo", "Palmeiras", "Corinthians", "São Paulo", "Santos", "Fluminense", "Botafogo", "Grêmio", "Internacional", "Atlético Mineiro"], "Brasil · Série B": ["Coritiba", "Athletico Paranaense", "América Mineiro", "Ceará", "Fortaleza", "Sport Recife", "Goiás", "Avaí", "CRB", "Chapecoense"], "Argentina · Primera División": ["River Plate", "Boca Juniors", "Racing Club", "Independiente", "San Lorenzo", "Estudiantes", "Vélez Sarsfield", "Rosario Central", "Newell’s Old Boys", "Talleres"], "México · Liga MX": ["América", "Chivas Guadalajara", "Cruz Azul", "Pumas UNAM", "Tigres UANL", "Monterrey", "Toluca", "Pachuca", "León", "Santos Laguna"], "Estados Unidos · MLS": ["Inter Miami", "LA Galaxy", "Los Angeles FC", "Atlanta United", "Seattle Sounders", "New York City FC", "New York Red Bulls", "Columbus Crew", "FC Cincinnati", "Austin FC"], "Colombia · Primera A": ["Atlético Nacional", "Millonarios", "América de Cali", "Deportivo Cali", "Junior", "Santa Fe", "Once Caldas", "Deportes Tolima", "Independiente Medellín", "Bucaramanga"], "Chile · Primera División": ["Colo-Colo", "Universidad de Chile", "Universidad Católica", "Palestino", "Huachipato", "Everton de Viña", "Unión Española", "Cobresal", "Coquimbo Unido", "O’Higgins"], "Uruguay · Primera División": ["Peñarol", "Nacional", "Defensor Sporting", "Danubio", "Liverpool Montevideo", "Wanderers", "River Plate Montevideo", "Cerro Largo", "Boston River", "Racing Montevideo"], "Perú · Liga 1": ["Universitario", "Alianza Lima", "Sporting Cristal", "Melgar", "Cienciano", "Cusco FC", "Sport Huancayo", "Atlético Grau", "ADT", "Sport Boys"], "Ecuador · Serie A": ["LDU Quito", "Barcelona SC", "Emelec", "Independiente del Valle", "El Nacional", "Aucas", "Universidad Católica Quito", "Delfín", "Mushuc Runa", "Orense"], "Paraguay · Primera División": ["Olimpia", "Cerro Porteño", "Libertad", "Guaraní", "Nacional Asunción", "Sportivo Luqueño", "Sol de América", "General Caballero", "2 de Mayo", "Tacuary"], "Japón · J1 League": ["Vissel Kobe", "Kawasaki Frontale", "Yokohama F. Marinos", "Urawa Red Diamonds", "Kashima Antlers", "Sanfrecce Hiroshima", "FC Tokyo", "Gamba Osaka", "Cerezo Osaka", "Nagoya Grampus"], "Corea del Sur · K League 1": ["Ulsan HD", "Jeonbuk Hyundai", "Pohang Steelers", "FC Seoul", "Suwon FC", "Daegu FC", "Daejeon Hana Citizen", "Gangwon FC", "Gwangju FC", "Jeju United"], "Arabia Saudí · Pro League": ["Al Hilal", "Al Nassr", "Al Ittihad", "Al Ahli", "Al Qadsiah", "Al Shabab", "Al Ettifaq", "Al Fateh", "Al Taawoun", "Al Fayha"], "China · Super League": ["Shanghai Port", "Shanghai Shenhua", "Beijing Guoan", "Shandong Taishan", "Chengdu Rongcheng", "Tianjin Jinmen Tiger", "Zhejiang FC", "Wuhan Three Towns", "Henan FC", "Changchun Yatai"], "India · Super League": ["Mohun Bagan", "Mumbai City", "Bengaluru FC", "Kerala Blasters", "FC Goa", "Odisha FC", "Chennaiyin FC", "East Bengal", "Jamshedpur FC", "Hyderabad FC"], "Australia · A-League": ["Melbourne City", "Melbourne Victory", "Sydney FC", "Western Sydney Wanderers", "Adelaide United", "Brisbane Roar", "Perth Glory", "Central Coast Mariners", "Wellington Phoenix", "Newcastle Jets"], "Egipto · Premier League": ["Al Ahly", "Zamalek", "Pyramids FC", "Al Masry", "Ceramica Cleopatra", "ENPPI", "Smouha", "Future FC", "Al Ittihad Alexandria", "Ismaily"], "Marruecos · Botola": ["Wydad Casablanca", "Raja Casablanca", "FAR Rabat", "RS Berkane", "FUS Rabat", "Maghreb Fès", "Ittihad Tanger", "Olympic Safi", "Hassania Agadir", "Difaâ El Jadida"], "Sudáfrica · Premiership": ["Mamelodi Sundowns", "Orlando Pirates", "Kaizer Chiefs", "Stellenbosch", "Cape Town City", "Sekhukhune United", "SuperSport United", "AmaZulu", "Golden Arrows", "TS Galaxy"], "Nigeria · Premier League": ["Enyimba", "Rivers United", "Remo Stars", "Rangers International", "Kano Pillars", "Shooting Stars", "Plateau United", "Bendel Insurance", "Kwara United", "Abia Warriors"], "Nueva Zelanda · National League": ["Auckland City", "Wellington Olympic", "Eastern Suburbs", "Auckland United", "Christchurch United", "Birkenhead United", "Western Springs", "Napier City Rovers", "Cashmere Technical", "Coastal Spirit"]};
 let currentLeague=Object.keys(LEAGUES)[0];
@@ -171,6 +251,85 @@ const dbOldNewSeason=newSeason;
 newSeason=function(){dbOldNewSeason();for(let p of [...game.players,...game.market]){normalizePlayer(p);p.age++;if(p.age<=25&&p.rating<p.potential&&Math.random()<.45)p.rating++;if(p.age>32&&Math.random()<.5)p.rating=Math.max(40,p.rating-1);p.fitness=100;p.apps=0;p.goals=0;p.assists=0}let expired=game.players.filter(p=>p.club===game.team&&p.contractUntil<game.season);if(expired.length){for(let p of expired)p.contractUntil=game.season+1;addNews('Contratos prorrogados automáticamente para '+expired.length+' futbolistas (prototipo)')}save()};
 const dbOldFinishRound=finishRound;
 finishRound=function(...args){let before=game.round;let res=dbOldFinishRound(...args);if(game.round!==before){for(let p of squad().sort((a,b)=>b.rating-a.rating).slice(0,11)){normalizePlayer(p);p.apps++}}save();return res};
+
+
+// NUEVO DISEÑO - Football Dynasty original, inspirado en los gestores modernos.
+const FD_NAV=[['inicio','⌂','Inicio'],['plantilla','♟','Plantilla'],['tacticas','▦','Tácticas'],['mercado','⇄','Fichajes'],['liga','🏆','Clasificación'],['entrenamiento','⚡','Entrenamiento'],['club','▤','Club'],['partido','▶','Partido 3D'],['copaNacional','★','Copa nacional'],['database','▣','Base de datos']];
+function fdMenu(){document.body.classList.toggle('drawer-open')}
+function fdRoute(v){document.body.classList.remove('drawer-open');go(v)}
+function fdUiLayout(){
+ const own=escapeHTML(CLUBS[game.team]||'Mi club'), league=escapeHTML(game.league||currentLeague);
+ $('headerRight').innerHTML='<span class="pill">'+own+' · '+game.season+'</span>';
+ $('app').innerHTML='<div class="scrim" onclick="fdMenu()"></div><div class="layout"><aside><div class="club-block"><span class="eyebrow">DIRECTOR TÉCNICO</span><strong>⚽ '+own+'</strong><small>'+league+'</small></div><div class="nav-label">CENTRO DE GESTIÓN</div>'+FD_NAV.slice(0,5).map(([id,icon,label])=>'<button class="'+(view===id?'active':'')+'" onclick="fdRoute(\''+id+'\')"><span style="font-size:17px;width:22px">'+icon+'</span>'+label+'</button>').join('')+'<div class="nav-label">CLUB Y COMPETICIONES</div>'+FD_NAV.slice(5).map(([id,icon,label])=>'<button class="'+(view===id?'active':'')+'" onclick="fdRoute(\''+id+'\')"><span style="font-size:17px;width:22px">'+icon+'</span>'+label+'</button>').join('')+'<div class="nav-label">PARTIDA</div><button onclick="save();toast(\'Partida guardada\')">💾 Guardar</button><button onclick="exportSave()">⬇ Copia de seguridad</button><button onclick="resetGame()">↻ Nueva carrera</button></aside><main id="content"></main></div><nav class="mobile-bar" aria-label="Menú principal">'+[['inicio','⌂','Inicio'],['plantilla','♟','Plantilla'],['tacticas','▦','Tácticas'],['mercado','⇄','Fichajes'],['partido','▶','Partido']].map(([id,icon,label])=>'<button class="'+(view===id?'active':'')+'" onclick="fdRoute(\''+id+'\')"><strong>'+icon+'</strong>'+label+'</button>').join('')+'</nav>';
+ let h=document.querySelector('header h1');if(h)h.innerHTML='<button class="mobile-menu-btn" onclick="fdMenu()" aria-label="Abrir menú">☰</button> <span>FOOTBALL DYNASTY</span> 2027';
+ renderView();
+}
+function fdDashboard(){
+ let f=nextFixture(), mine=CLUBS[game.team],home=f?CLUBS[f.home]:'Por decidir',away=f?CLUBS[f.away]:'Por decidir', n=CLUBS.length;
+ let ranked=[...game.table].sort((a,b)=>b.pts-a.pts||(b.gf-b.ga)-(a.gf-a.ga)||b.gf-a.gf),pos=ranked.findIndex(x=>x.id===game.team)+1;
+ let ownBudget=money(game.budget),totalRounds=(game.fixtures.reduce((a,x)=>Math.max(a,x.round),0)||18);
+ let msg=game.news.slice(0,5);
+ return '<div class="manager-hero"><div><div class="eyebrow">CENTRO DE MANDO · TEMPORADA '+game.season+'/'+(game.season+1)+'</div><h2>Buenos días, míster.</h2><p>'+escapeHTML(mine)+' · '+escapeHTML(game.league)+' · Jornada '+game.round+'</p></div><button class="primary" onclick="fdRoute(\'partido\')">▶ PREPARAR PARTIDO</button></div>'+
+ '<div class="cards"><div class="card"><div class="muted">POSICIÓN EN LIGA</div><strong>'+pos+'º <span style="font-size:12px;color:#b3c2d7">/ '+n+'</span></strong></div><div class="card"><div class="muted">PRESUPUESTO</div><strong>'+ownBudget+'</strong></div><div class="card"><div class="muted">JORNADA</div><strong>'+game.round+' <span style="font-size:12px;color:#b3c2d7">/ '+totalRounds+'</span></strong></div><div class="card"><div class="muted">MEDIA DEL ONCE</div><strong>'+avg(game.team).toFixed(1)+'</strong></div></div>'+
+ '<div class="fm-board"><div><section class="panel"><div class="manager-section-head"><h3>⚽ Próximo partido</h3><span class="tiny-tag">JORNADA '+game.round+'</span></div><div class="fixture-card"><div class="fixture-vs"><div><div class="fixture-badge">🛡️</div><strong>'+escapeHTML(home)+'</strong></div><em>VS</em><div><div class="fixture-badge">⚔️</div><strong>'+escapeHTML(away)+'</strong></div></div></div><div class="actions"><button class="primary" onclick="fdRoute(\'partido\')">Ver partido 3D →</button><button onclick="fdRoute(\'tacticas\')">Ajustar tácticas</button></div></section><section class="panel"><div class="manager-section-head"><h3>Accesos rápidos</h3><span class="tiny-tag">TU CLUB</span></div><div class="quick-links"><button onclick="fdRoute(\'plantilla\')"><span style="font-size:23px">♟</span>Plantilla</button><button onclick="fdRoute(\'mercado\')"><span style="font-size:23px">⇄</span>Fichajes</button><button onclick="fdRoute(\'entrenamiento\')"><span style="font-size:23px">⚡</span>Entrenar</button></div></section></div>'+
+ '<div><section class="panel"><div class="manager-section-head"><h3>✉ Bandeja de entrada</h3><span class="tiny-tag">'+msg.length+' MENSAJES</span></div>'+(msg.length?msg.map((t,i)=>'<div class="news-item"><span class="news-dot"></span><p>'+escapeHTML(t)+'</p></div>').join(''):'<div class="news-item"><p>Sin mensajes nuevos</p></div>')+'</section><section class="panel"><div class="manager-section-head"><h3>🏆 Clasificación</h3><button onclick="fdRoute(\'liga\')">Ver liga →</button></div>'+ranked.slice(0,5).map((r,i)=>'<div class="rank-row '+(r.id===game.team?'me':'')+'"><span>'+ (i+1)+'. '+escapeHTML(CLUBS[r.id])+'</span><b>'+r.pts+' pts</b></div>').join('')+'</section></div></div>';
+}
+// Preserva todas las pantallas y la partida; solo sustituye la presentación.
+const fdOldRenderView=renderView;
+renderView=function(){if(view==='inicio'){$('content').innerHTML=fdDashboard();return}fdOldRenderView()};
+layout=fdUiLayout;
+const fdOldSetup=setup;
+setup=function(){document.body.classList.remove('drawer-open');fdOldSetup();let h=document.querySelector('header h1');if(h)h.innerHTML='⚽ <span>FOOTBALL DYNASTY</span> 2027';};
+
+
+// Manager Ultra: capa visual independiente, preserva motor y clave de guardado.
+function ultraSetup(){
+ document.body.classList.remove('drawer-open');
+ $('headerRight').innerHTML='<span class="pill">● MANAGER ULTRA</span>';
+ let saved=load();
+ let options=Object.keys(LEAGUES);
+ $('app').innerHTML=`<div class="fm-setup">
+  <div class="eyeline">◈ FOOTBALL DYNASTY / EDICIÓN 2027</div>
+  <section class="welcome">
+    <span class="tag">⚡ NUEVA EXPERIENCIA MANAGER</span>
+    <h2>El fútbol se decide<br><em>desde el banquillo.</em></h2>
+    <p>Construye tu proyecto, domina el mercado y prepara cada jornada. Tu carrera comienza con una decisión.</p>
+    <div class="mini-kpis"><div><b>${options.length}</b><span>Ligas de referencia</span></div><div><b>3D</b><span>Vista estilizada</span></div><div><b>∞</b><span>Temporadas</span></div></div>
+  </section>
+  <div class="setup-grid">
+   <section class="setup-card"><span class="tag">01 / NUEVA CARRERA</span><h3 style="margin-top:16px">Elige tu próximo desafío</h3><p>Selecciona la competición y el club que vas a dirigir.</p>
+    <label class="field" for="league">COMPETICIÓN</label>
+    <select id="league" onchange="chooseLeague()">${options.map(x=>'<option value="'+escapeHTML(x)+'">'+escapeHTML(x)+'</option>').join('')}</select>
+    <label class="field" for="club">EQUIPO</label>
+    <select id="club">${CLUBS.map((x,i)=>'<option value="'+i+'">'+escapeHTML(x)+'</option>').join('')}</select>
+    <div class="actions"><button class="primary" onclick="start()">⚽ COMENZAR CARRERA →</button>${saved?'<button onclick="continueGame()">↻ CONTINUAR PARTIDA</button>':''}</div>
+   </section>
+   <section class="setup-card"><span class="tag">02 / CENTRO TÁCTICO</span><h3 style="margin-top:16px">Tu club. Tus decisiones.</h3>
+    <div class="pitch-preview"><div class="dots">⚪　⚪　⚪　⚪　⚪</div></div>
+    <div class="feature-row"><i>▦</i><div><strong>Plantilla y táctica</strong><small>Formaciones, estado físico y rendimiento</small></div></div>
+    <div class="feature-row"><i>⇄</i><div><strong>Mercado de fichajes</strong><small>Presupuesto y operaciones de club</small></div></div>
+    <div class="feature-row"><i>◉</i><div><strong>Competiciones</strong><small>Clasificación y calendario simplificados</small></div></div>
+   </section>
+  </div>
+  <p class="disclaimer">Prototipo independiente. Clubes usados como referencia, jugadores ficticios y competiciones simplificadas. No reproduce las bases de datos oficiales ni la simulación 3D de Football Manager.</p>
+ </div>`;
+}
+function ultraHome(){
+ let f=nextFixture(),mine=CLUBS[game.team],rank=[...game.table].sort((a,b)=>b.pts-a.pts||(b.gf-b.ga)-(a.gf-a.ga)),pos=rank.findIndex(x=>x.id===game.team)+1;
+ let home=f?CLUBS[f.home]:'Temporada',away=f?CLUBS[f.away]:'finalizada';
+ return `<div class="ultra-top"><div><div class="eyeline">CENTRO DE GESTIÓN / ${escapeHTML(currentLeague)}</div><h2>Bienvenido, míster ⚡</h2></div><button onclick="go('partido')">CONTINUAR →</button></div>
+ <div class="ultra-strip"><div><small>POSICIÓN</small><strong>${pos}º / ${CLUBS.length}</strong></div><div><small>PRESUPUESTO</small><strong>${money(game.budget)}</strong></div><div><small>JORNADA</small><strong>${game.round} / 18</strong></div></div>
+ <div class="ultra-columns"><div>
+  <div class="ultra-fixture"><span class="tag">PRÓXIMO PARTIDO · JORNADA ${game.round}</span><div class="clubs"><span><i>🛡️</i>${escapeHTML(home)}</span><b>VS</b><span><i>⚔️</i>${escapeHTML(away)}</span></div><button class="primary" onclick="go('partido')">▶ IR AL PARTIDO</button></div>
+  <div class="panel"><h3>ACCESOS RÁPIDOS</h3><div class="ultra-links"><button onclick="go('plantilla')">👥 PLANTILLA →</button><button onclick="go('tacticas')">▦ TÁCTICAS →</button><button onclick="go('mercado')">⇄ FICHAJES →</button><button onclick="go('liga')">🏆 CLASIFICACIÓN →</button></div></div>
+ </div><div>
+  <div class="panel"><h3>✉ BANDEJA DE ENTRADA</h3>${game.news.slice(0,6).map(x=>'<div class="ultra-news">'+escapeHTML(x)+'</div>').join('')||'<p class="muted">Sin mensajes nuevos.</p>'}</div>
+  <div class="panel"><h3>INFORME DEL CLUB</h3><p class="muted">${escapeHTML(mine)}</p><div class="ultra-news">Media del equipo: <b>${avg(game.team).toFixed(1)}</b></div><div class="ultra-news">Sistema: <b>${escapeHTML(game.formation)}</b></div><div class="ultra-news">Mentalidad: <b>${escapeHTML(game.mentality)}</b></div></div>
+ </div></div>`;
+}
+const ultraPreviousRender=renderView;
+renderView=function(){if(view==='inicio'){$('content').innerHTML=ultraHome();return;}ultraPreviousRender();};
+setup=ultraSetup;
 
 try{setup()}catch(error){document.getElementById('app').innerHTML='<section class="panel"><h2>No se ha podido iniciar el juego</h2><p>Prueba a recargar Safari. Si persiste, envíanos este error:</p><pre style="white-space:pre-wrap">'+String(error.message).replace(/</g,'&lt;')+'</pre></section>';console.error(error)}
 </script></body></html>
